@@ -1,0 +1,326 @@
+/* Variáveis de Cores da UNINASSAU - Adapte conforme a paleta oficial */
+:root {
+    --primary-color: #003366;
+    /* Azul escuro principal */
+    --secondary-color: #FDB927;
+    /* Amarelo/Laranja vibrante */
+    --text-color-light: #333;
+    --text-color-dark: #eee;
+    --background-light: #f4f4f4;
+    --background-dark: #222;
+    --card-background-light: #fff;
+    --card-background-dark: #333;
+    --border-color-light: #ddd;
+    --border-color-dark: #555;
+}
+
+.header {
+    text-align: center;
+
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .header {
+    background-color: #1a1a1a;
+    /* Escurece o header */
+}
+
+body.dark-mode .sidebar,
+body.dark-mode .content .slideshow,
+body.dark-mode .calendar-section {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+}
+
+body.dark-mode .sidebar h3,
+body.dark-mode .content h2 {
+    color: var(--secondary-color);
+    /* Mantém destaque */
+}
+
+body.dark-mode .sidebar a {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #444;
+}
+
+body.dark-mode .theme-switcher button {
+    background-color: var(--primary-color);
+    color: var(--text-color-dark);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 200px;
+    align-items: center;
+    display: flex;
+
+
+    /* Ajuste o tamanho da logo */
+}
+
+.theme-switcher button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switcher button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+}
+
+/* Sidebars */
+.sidebar {
+    width: 250px;
+    background-color: var(--card-background-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color-light);
+}
+
+.sidebar h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    /* Ícones coloridos */
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9e9e9;
+    color: var(--primary-color);
+}
+
+/* Conteúdo Central */
+.content {
+    flex-grow: 1;
+    /* Ocupa o espaço restante */
+    background-color: var(--card-background-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color-light);
+}
+
+/* Slides de Acontecimentos */
+.slideshow {
+    text-align: center;
+}
+
+.slideshow h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.slides-container {
+    display: flex;
+    /* Para controlar os slides com JS */
+    overflow: hidden;
+    /* Esconde slides fora da vista */
+    position: relative;
+    /* Para posicionar botões de navegação */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    /* Altura fixa para os slides */
+}
+
+.slides-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorção */
+    display: none;
+    /* Esconde todas as imagens por padrão, o JS irá mostrar uma por vez */
+}
+
+.slides-container img:first-child {
+    display: block;
+    /* Mostra a primeira imagem */
+}
+
+/* Calendário */
+.calendar-section {
+    margin-top: 20px;
+    background-color: var(--card-background-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color-light);
+}
+
+.calendar-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+#calendar {
+    /* Estilos para o calendário, se for usar uma biblioteca como FullCalendar */
+    min-height: 250px;
+    /* Apenas para visualização inicial */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .social-media a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer .social-media a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsividade básica */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .sidebar ul li a {
+        justify-content: center;
+    }
+}
+
+.calendar {
+    margin-top: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0px;
+}
+
+.calendar-day-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}

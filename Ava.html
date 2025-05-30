@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVA UNINASSAU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cores UNINASSAU (aproximadas) */
+        :root {
+            --uninassau-blue: #003366;
+            /* Azul principal */
+            --uninassau-light-blue: #003366;
+            /* Azul um pouco mais claro para detalhes */
+            --uninassau-yellow: #FDB927;
+            /* Amarelo para destaque */
+            --text-color: #333;
+            --white: #eee;
+            --light-gray: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+        }
+
+
+        .header {
+            background-color: var(--uninassau-blue);
+            color: var(--white);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            max-width: 450px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        .navbar {
+            background-color: var(--uninassau-light-blue);
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--uninassau-yellow);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-top: 5px solid var(--uninassau-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--uninassau-blue);
+            margin-top: 0;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .card .btn {
+            display: inline-block;
+            background-color: var(--uninassau-yellow);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .card .btn:hover {
+            background-color: #e6b300;
+            /* Um pouco mais escuro que o amarelo */
+        }
+
+        .footer {
+            background-color: var(--uninassau-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar ul li {
+                margin: 5px 0;
+            }
+
+            .container {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/Design_sem_nome__2_-removebg-preview_1.png" alt="Logo UNINASSAU" class="logo">
+        <h1>Ambiente Virtual de Aprendizagem</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Meus Cursos</a></li>
+            <li><a href="#">Notas</a></li>
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Suporte</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card-grid">
+            <div class="card">
+                <h2>Cálculo Diferencial e Integral I</h2>
+                <p>Acesse o material, fóruns e atividades da disciplina de Cálculo.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+            <div class="card">
+                <h2>Programação Web</h2>
+                <p>Fique por dentro das aulas de HTML, CSS, JavaScript e muito mais.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+            <div class="card">
+                <h2>Metodologia Científica</h2>
+                <p>Orientações para o desenvolvimento de trabalhos acadêmicos.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+            <div class="card">
+                <h2>Comunicação Empresarial</h2>
+                <p>Conteúdo sobre escrita e comunicação no ambiente corporativo.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+            <div class="card">
+                <h2>História da Arquitetura</h2>
+                <p>Estude os períodos e estilos arquitetônicos desde a antiguidade.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+            <div class="card">
+                <h2>Direito Constitucional</h2>
+                <p>Aprofunde-se nos princípios e normas da Constituição Federal.</p>
+                <a href="#" class="btn">Acessar Curso</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Faculdade Excelência - Todos os direitos reservados © 2025</p>
+        <p>Atendimento: Segunda a Sexta, das 9h às 18h</p>
+        <p>Endereço UNINASSAU: R. Dr. Otto Tito, 278-306 - Redenção, Teresina - PI, 64017-775</p>
+    </footer>
+</body>
+
+</html>

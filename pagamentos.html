@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Financeiro - Faculdade Excelência</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            /* Azul universitário */
+            --secondary-color: #FDB927;
+            /* Dourado */
+            --accent-color: #E74C3C;
+            /* Vermelho para alertas */
+            --light-color: #eee;
+            --dark-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 450px;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .payment-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .payment-header {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .payment-title {
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .student-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .invoice-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .invoice-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .total-amount {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .payment-options {
+            margin-top: 30px;
+        }
+
+        .payment-method {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #002244;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e6c200;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/Design_sem_nome__2_-removebg-preview_1.png " alt="Faculdade Excelência" class="logo">
+        <h1>Portal Financeiro</h1>
+    </header>
+
+    <div class="container">
+        <div class="alert alert-warning">
+            <strong>Atenção:</strong> Os boletos vencerão no dia 10 de cada mês. Pagamentos após esta data estarão
+            sujeitos a multa de 2% mais juros de 0,033% ao dia.
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-header">
+                <h2 class="payment-title">Pagamento de Mensalidades</h2>
+                <span>Ano Letivo: 2025</span>
+            </div>
+
+            <div class="student-info">
+                <p><strong>Aluno:</strong> Italo Marcio</p>
+                <p><strong>RA:</strong> 2023001234</p>
+                <p><strong>Curso:</strong> Analise e Desevolvimento de Sistema</p>
+                <p><strong>Período:</strong> Noturno - 1º Semestre</p>
+            </div>
+
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Parcela</th>
+                        <th>Vencimento</th>
+                        <th>Valor (R$)</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01/12</td>
+                        <td>10/05/2025</td>
+                        <td>850,00</td>
+                        <td><span style="color: green;">Pago</span></td>
+                        <td><button class="btn btn-secondary">Recibo</button></td>
+                    </tr>
+                    <tr>
+                        <td>02/12</td>
+                        <td>10/06/2025</td>
+                        <td>850,00</td>
+                        <td><span style="color: green;">Pago</span></td>
+                        <td><button class="btn btn-secondary">Recibo</button></td>
+                    </tr>
+                    <tr>
+                        <td>03/12</td>
+                        <td>10/07/2025</td>
+                        <td>850,00</td>
+                        <td><span style="color: green;">Pago</span></td>
+                        <td><button class="btn btn-secondary">Recibo</button></td>
+                    </tr>
+                    <tr>
+                        <td>04/12</td>
+                        <td>10/08/2025</td>
+                        <td>850,00</td>
+                        <td><span style="color: var(--accent-color);">Pendente</span></td>
+                        <td><button class="btn btn-primary">Pagar</button></td>
+                    </tr>
+                    <!-- Mais parcelas... -->
+                </tbody>
+            </table>
+
+            <div class="total-amount">
+                Total Pendente: <span style="font-size: 1.4em;">R$ 3.400,00</span>
+            </div>
+
+            <div class="payment-options">
+                <h3>Opções de Pagamento</h3>
+
+                <div class="payment-method">
+                    <h4>Cartão de Crédito</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>Número do Cartão</label>
+                            <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="form-group">
+                            <label>Nome no Cartão</label>
+                            <input type="text" class="form-control" placeholder="Nome impresso no cartão">
+                        </div>
+                        <div style="display: flex; gap: 15px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label>Validade</label>
+                                <input type="text" class="form-control" placeholder="MM/AA">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label>CVV</label>
+                                <input type="text" class="form-control" placeholder="000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Parcelamento</label>
+                            <select class="form-control">
+                                <option>1x de R$ 850,00</option>
+                                <option>2x de R$ 425,00</option>
+                                <option>3x de R$ 283,33</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pagar com Cartão</button>
+                    </form>
+                </div>
+
+                <div class="payment-method">
+                    <h4>Boleto Bancário</h4>
+                    <p>Emita o boleto para pagamento em qualquer agência bancária ou internet banking.</p>
+                    <button class="btn btn-secondary">Emitir Boleto</button>
+                </div>
+
+                <div class="payment-method">
+                    <h4>Débito Automático</h4>
+                    <p>Configure o débito automático em sua conta corrente e não se preocupe com pagamentos.</p>
+                    <button class="btn btn-secondary">Configurar Débito Automático</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-header">
+                <h2 class="payment-title">Outros Pagamentos</h2>
+            </div>
+
+            <div class="student-info">
+                <p>Taxas e serviços adicionais disponíveis para pagamento.</p>
+            </div>
+
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Material Didático - Semestre 2025/1</td>
+                        <td>250,00</td>
+                        <td><button class="btn btn-primary">Pagar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Certificado de Conclusão de Módulo</td>
+                        <td>50,00</td>
+                        <td><button class="btn btn-primary">Pagar</button></td>
+                    </tr>
+                    <tr>
+                        <td>2ª Via de Carteirinha</td>
+                        <td>35,00</td>
+                        <td><button class="btn btn-primary">Pagar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+
+        <p>Faculdade Excelência - Todos os direitos reservados © 2025</p>
+        <p>Atendimento: Segunda a Sexta, das 9h às 18h</p>
+        <p>Endereço UNINASSAU: R. Dr. Otto Tito, 278-306 - Redenção, Teresina - PI, 64017-775</p>
+    </footer>
+</body>
+
+</html>

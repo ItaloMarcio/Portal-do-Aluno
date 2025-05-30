@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provas Online - ADS | UNINASSAU</title>
+    <style>
+        :root {
+            --azul-uninassau: #003366;
+            --laranja-uninassau: #FDB927;
+            --cinza-claro: #F5F5F5;
+            --cinza-escuro: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--cinza-escuro);
+            background-color: var(--cinza-claro);
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 450px;
+            justify-content: center;
+
+        }
+
+        .banner {
+            background-color: var(--azul-uninassau);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        .banner p {
+            margin: 10px 0 0;
+            font-size: 1.1em;
+        }
+
+        .provas-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .materia-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .materia-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .materia-header {
+            background-color: var(--laranja-uninassau);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .materia-body {
+            padding: 20px;
+        }
+
+        .materia-body p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--azul-uninassau);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #003d73;
+        }
+
+        footer {
+            background-color: var(--azul-uninassau);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: var(--laranja-uninassau);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .provas-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="container header-content">
+            <img src="img/Design_sem_nome__2_-removebg-preview_1.png" alt="UNINASSAU Logo" class="logo">
+            <nav>
+                <!-- Menu de navegação pode ser adicionado aqui -->
+            </nav>
+        </div>
+        <br><br>
+        <div class="container">
+            <h1>Provas Online - Análise e Desenvolvimento de Sistemas</h1>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar por disciplina...">
+            <button>Buscar</button>
+        </div>
+
+        <div class="provas-container">
+            <!-- Card 1 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Algoritmos e Lógica de Programação
+                </div>
+                <div class="materia-body">
+                    <p>Provas sobre conceitos fundamentais de lógica, estruturas de controle e algoritmos básicos.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Programação Orientada a Objetos
+                </div>
+                <div class="materia-body">
+                    <p>Avaliações sobre classes, objetos, herança, polimorfismo e outros conceitos de POO.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Banco de Dados
+                </div>
+                <div class="materia-body">
+                    <p>Testes sobre modelagem relacional, SQL, normalização e administração de bancos de dados.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Engenharia de Software
+                </div>
+                <div class="materia-body">
+                    <p>Provas sobre metodologias ágeis, UML, processos de desenvolvimento e qualidade de software.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Redes de Computadores
+                </div>
+                <div class="materia-body">
+                    <p>Avaliações sobre protocolos, arquiteturas de rede, segurança e administração de redes.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="materia-card">
+                <div class="materia-header">
+                    Sistemas Operacionais
+                </div>
+                <div class="materia-body">
+                    <p>Testes sobre gerência de processos, memória, sistemas de arquivos e virtualização.</p>
+                    <a href="#" class="btn">Acessar Provas</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <p>Faculdade Excelência - Todos os direitos reservados © 2025</p>
+            <p>Atendimento: Segunda a Sexta, das 9h às 18h</p>
+            <p>Endereço UNINASSAU: R. Dr. Otto Tito, 278-306 - Redenção, Teresina - PI, 64017-775</p>
+        </div>
+    </footer>
+</body>
+
+</html>
